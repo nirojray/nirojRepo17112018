@@ -12,7 +12,12 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.8.RELEASE</version>
     </parent>
-
+    <distributionmanagement>
+       <repository>
+           <id>nexus</id>
+           <url>http://localhost:8081/repository/maven-snapshots/</url>
+       </repository>
+    </distributionmanagement>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -28,15 +33,8 @@
             <artifactId>json-path</artifactId>
             <scope>test</scope>
         </dependency>
-        
-        
     </dependencies>
-    <distributionmanagement>
-       <repository>
-           <id>nexus</id>
-           <url>http://localhost:8081/repository/maven-snapshots/</url>
-       </repository>
-    </distributionmanagement>
+    
 
     <properties>
         <java.version>1.8</java.version>
